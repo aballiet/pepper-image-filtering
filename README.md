@@ -4,6 +4,8 @@ Filtrer les images permet de sélectionner celles qui contiennent le plus d'info
 
 Ainsi, on économise en bande passante et en ressources sur le Robot et les machines qui souscrivent aux topic ROS.
 
+![pepper](./images/pepper.jpg)
+
 Notre démarche s'articule ainsi :
 
 - Etudier les méthodes de filtrages
