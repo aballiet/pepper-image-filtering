@@ -30,5 +30,10 @@ Enfin, nous réaliserons une étude des gains lors d'un scénario de navigation
 Utiliser les données depuis un rosbag : dump des messages ROS envoyés par le robot lors de son fonctionnement.
 
 ``` bash
-python ext.py --bag_file ./rosbag/2019-07-06-20-25-42.bag --output_dir ./dataset --image_topic "/pepper_robot/camera/front/image_raw"
+python ext.py --bag_file ./rosbag/2019-07-06-20-25-42.bag --output_dir ./dataset --image_topic "/pepper_robot/camera/front/image_raw" # exemple /pepper_robot/camera/front/image_raw
+```
+### Teleop Pepper
+
+``` bash
+python pepper_teleop_key.py
 ```
