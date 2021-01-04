@@ -3,11 +3,15 @@ from imutils import paths
 import cv2
 import shutil
 
-def check_if_blurred(folder, threshold, crop_factor=0, copy=False, logging=False):
+def check_if_blurred(base_path, threshold, crop_factor=0, copy=False, logging=False):
     counter = 0
     total   = 0
     
-    for image_name in paths.list_images(folder):
+    image_path   = base_path + '/original'
+    dest_blurred = base_path + '/blurred'
+    dest_sharp   = base_path + '/sharp'
+    
+    for image_name in paths.list_images(image_path):
 
         image = cv2.imread(image_name)
         height, width = len(image), len(image[0])
@@ -28,6 +32,7 @@ def check_if_blurred(folder, threshold, crop_factor=0, copy=False, logging=False
         if fm < threshold:
             counter += 1
             if copy:
+                print("copy {}".format(image_name))
                 shutil.copy2(image_name, dest_blurred) # target filename is /dst/dir/file.ext
             
         else:
